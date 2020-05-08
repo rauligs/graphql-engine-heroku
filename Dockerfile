@@ -2,7 +2,6 @@ FROM hasura/graphql-engine:v1.2.1
 
 # Enable the console
 ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
-ENV HASURA_GRAPHQL_JWT_SECRET=$JWT_SECRET
 
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
@@ -18,7 +17,8 @@ CMD graphql-engine \
     --database-url $DATABASE_URL \
     serve \
     --server-port $PORT \
-    --admin-secret $ADMIN_SECRET
+    --admin-secret $ADMIN_SECRET \
+    --jwt-secret $JWT_SECRET
 #    --access-key $ACCESS_KEY
 #    --auth-hook https://myapp.com/hasura-webhook 
 #
