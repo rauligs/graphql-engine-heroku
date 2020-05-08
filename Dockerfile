@@ -18,8 +18,6 @@ CMD graphql-engine \
     serve \
     --server-port $PORT \
     --admin-secret $ADMIN_SECRET \
-    --jwt-secret $JWT_SECRET
-#    --access-key $ACCESS_KEY
-#    --auth-hook https://myapp.com/hasura-webhook 
-#
-# Console can be enable/disabled by the env var HASURA_GRAPHQL_ENABLE_CONSOLE
+#   --access-key $ACCESS_KEY
+# 	--auth-hook https://myapp.com/hasura-webhook 
+
