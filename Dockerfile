@@ -10,6 +10,9 @@ ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
 #    serve \
 #    --server-port $PORT
 
+# See https://stackoverflow.com/questions/46652928/shell-into-a-docker-container-running-on-a-heroku-dyno-how
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
 ## Comment the command above and use the command below to
 ## enable an access-key and an auth-hook
 ## Recommended that you set the access-key as a environment variable in heroku
