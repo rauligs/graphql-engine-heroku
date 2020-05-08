@@ -17,7 +17,8 @@ CMD graphql-engine \
     --database-url $DATABASE_URL \
     serve \
     --server-port $PORT \
-    --admin-secret $ADMIN_SECRET
+    --admin-secret $ADMIN_SECRET \
+    --unauthorized-role $UNAUTHORIZED_ROLE
 #    --access-key $ACCESS_KEY
 #    --auth-hook https://myapp.com/hasura-webhook 
 #
